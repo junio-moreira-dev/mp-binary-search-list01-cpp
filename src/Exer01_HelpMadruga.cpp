@@ -5,40 +5,11 @@
 #include <iostream>
 #include <vector>
 #include <iomanip>
-#include <algorithm>
 #include <cmath>
 
 using namespace std;
 
 #define FAST_IO ios_base::sync_with_stdio(0); cin.tie(0);
-
-// ==========================================================
-// TODO 1: Implement the function that calculates the total upper
-// remaining area when cutting the strips at a height 'mid'.
-// ==========================================================
-double calculateCurrentArea(const vector<int>& strips, double mid) {
-    double currentArea = 0;
-
-    // Hint: Loop through the strips and check if strips[i] > mid.
-    // If it is, add (strips[i] - mid) to currentArea.
-
-    return currentArea;
-}
-
-// ==========================================================
-// TODO 2: Implement the Binary Search function.
-// It should return the exact cutting height 'mid'.
-// ==========================================================
-double binarySearchHeight(double targetArea, const vector<int>& strips, int maxHeight) {
-    double low = 0.0, high = maxHeight;
-    double mid = 0.0;
-    double eps = 1e-6; // Precision margin
-
-    // Hint: Use the loop while (high - low > eps)
-    // Call calculateCurrentArea inside the search to test 'mid'.
-
-    return mid;
-}
 
 int main() {
     FAST_IO;
@@ -73,9 +44,25 @@ int main() {
         }
 
         // ==========================================================
-        // TODO 3: Call the binary search function and store the result.
+        // TODO 1: Initialize the binary search boundaries (low and high)
+        // and the precision margin (eps).
         // ==========================================================
-        double answer = 0.0; // Replace with the function call
+        double low = 0.0;
+        double high = maxHeight;
+        double eps = 1e-6;
+
+        double answer = 0.0;
+
+        // ==========================================================
+        // TODO 2: Implement the Binary Search loop (while high - low > eps).
+        // Inside the loop, calculate 'mid', compute the total upper area
+        // obtained by cutting at height 'mid', and adjust low or high.
+        // ==========================================================
+
+
+        // ==========================================================
+        // TODO 3: Assign the final height to the 'answer' variable.
+        // ==========================================================
 
         // Print the answer with exactly 4 decimal places
         cout << fixed << setprecision(4) << answer << "\n";
